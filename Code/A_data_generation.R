@@ -70,6 +70,6 @@ generate_data <- function(n, d, m, t, e){
   Y = W*Y1 + (1-W)*Y0 #Observed Outcome
   
   df <- cbind(data.frame( cbind(Y, Y0, Y1, W) ), data.frame(X))
-    
+  
   return(df)
 }
