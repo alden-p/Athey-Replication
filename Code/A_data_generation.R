@@ -49,6 +49,26 @@ e2 <- function(x){
   return(.5)
 }
 
+
+######################################################################################
+# Function to Get tau(x) under unconfoundedness
+######################################################################################
+
+
+tau <- function(W, Y, e){
+  #X: A matrix of observables
+  #W: The treatment
+  #Y: The outcome
+  #e: The treatment propensity
+  
+  
+  t <- Y*(W/e - (1-W)/(1-e))
+  
+  return (t)
+  
+}
+
+
 ######################################################################################
 # Define the Actual Generate Data Function
 ######################################################################################
